@@ -2,6 +2,8 @@
 
 **A merge gate for RAG quality.** It scores your RAG app's outputs, compares them with a saved baseline, and fails the build when a metric drops by more than you allow, but only when the drop is real rather than noise from a few questions.
 
+**Write-up:** [Why RAG needs a merge gate that remembers](docs/writeup.md)
+
 Built on [continuous-eval](https://github.com/relari-ai/continuous-eval) (Apache-2.0) as an unmodified dependency. Fully offline: no API key and no model download.
 
 [![CI](https://github.com/rvspraveen/rag-eval-gate/actions/workflows/ci.yml/badge.svg)](https://github.com/rvspraveen/rag-eval-gate/actions/workflows/ci.yml)
