@@ -25,7 +25,7 @@ dependencies = [
   # Exact pin: the last upstream release (Jan 2025). Upgrades only via a PR that passes the dogfood gate.
   "continuous-eval==0.3.14.post2",
   "numpy>=2.2.6",
-  "pydantic>=2.5",
+  "pydantic>=2.14.3",
   "pyyaml>=6.0.3",
   "rich>=13.0",
 ]
