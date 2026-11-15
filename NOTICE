@@ -1,0 +1,21 @@
+rag-eval-gate
+Copyright (c) 2026 Praveen RVS. Licensed under the MIT License.
+
+This project depends on the following third-party software, used as
+unmodified dependencies (not vendored, not forked):
+
+- continuous-eval (https://github.com/relari-ai/continuous-eval)
+  Copyright Relari, Inc. (Yi Zhang, Pasquale Antonante and contributors).
+  Apache License 2.0.
+  rag-eval-gate computes every metric through continuous-eval's public
+  Metric classes (PrecisionRecallF1, RankedRetrievalMetrics,
+  DeterministicFaithfulness, DeterministicAnswerCorrectness).
+  Pinned at 0.3.14.post2. Its anonymous telemetry is disabled by setting
+  CONTINUOUS_EVAL_DO_NOT_TRACK=true before it is imported.
+
+- NumPy (https://numpy.org), BSD-3-Clause License
+- pydantic (https://github.com/pydantic/pydantic), MIT License
+- PyYAML (https://github.com/yaml/pyyaml), MIT License
+- rich (https://github.com/Textualize/rich), MIT License
+- NLTK data (punkt, punkt_tab, stopwords) is downloaded at setup time by
+  `reg setup`; it is not redistributed with this project.

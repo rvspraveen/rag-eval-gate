@@ -1,0 +1,14 @@
+# Which metrics block a merge, and by how much they may drop versus the baseline.
+# A metric fails only if the mean drop exceeds the margin AND the paired bootstrap
+# confidence interval of the drop excludes zero (so a few noisy items don't block).
+metrics:
+  context_recall:             {max_drop: 0.05}
+  context_precision:          {max_drop: 0.05}
+  ndcg:                       {max_drop: 0.03}
+  token_overlap_faithfulness: {max_drop: 0.05, min: 0.70}
+  rouge_l_recall:             {max_drop_rel: 0.10, severity: warn}
+
+bootstrap: {samples: 2000, confidence: 0.95, seed: 7}
+min_items: 20      # refuse to gate on fewer items (exit 2)
+item_drop: 0.10    # list items whose score fell by at least this much
+max_items_listed: 10
